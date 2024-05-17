@@ -18,6 +18,8 @@ namespace Zene
 
         static void EloadokElemzese()
         {
+            //string[] eloadok = new string[677];
+            List<string> eloadok = new List<string>();
             foreach (string sor in File.ReadAllLines("zenek.txt"))
             {
 
@@ -31,7 +33,17 @@ namespace Zene
                 {
                     eloado += (' ' + reszek[i]);
                 }
-                Console.WriteLine(eloado);
+                //Console.WriteLine(eloado);
+                if (!eloadok.Contains())
+                {
+                    eloadok.Add(eloado);
+
+                }
+
+                foreach (string eloado in eloadok)
+                {
+                    Console.WriteLine(eloado);
+                }
             }
         }
 
